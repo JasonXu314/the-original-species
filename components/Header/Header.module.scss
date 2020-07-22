@@ -5,6 +5,7 @@
 		display: flex;
 		flex-direction: row;
 		background: vars.$primary;
+		justify-content: space-between;
 
 		.logo {
 			margin: 0.5em 1em;
@@ -18,21 +19,23 @@
 
 		.links {
 			list-style: none;
-			display: flex;
-			flex-direction: row;
+			display: block;
 
 			.link {
-				padding: 1.35em;
+				height: 100%;
+				display: inline-block;
 
 				&:hover {
 					background: darken(vars.$primary, 10%);
 				}
 
 				.text {
+					display: block;
 					text-decoration: none;
-					padding: 0.5em 1em;
+					padding: 0.9em 1em;
 					font-size: 1.5em;
 					color: white;
+					text-align: center;
 				}
 			}
 		}
