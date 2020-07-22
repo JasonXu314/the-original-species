@@ -1,0 +1,36 @@
+.main {
+	margin: 0 10em;
+	background: white;
+
+	.imgContainer {
+		width: 100%;
+		overflow: hidden;
+		height: 20em;
+
+		.img {
+			width: 100%;
+			transform: translate(0, -15%);
+		}
+	}
+
+	.card {
+		padding: 1em;
+
+		h1 {
+			text-align: center;
+		}
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		padding: 1em;
+		gap: 4em;
+
+		.card {
+			border: 1px solid #888888;
+			border-radius: 5px;
+			box-shadow: 2px 3px #eeeeee;
+		}
+	}
+}
