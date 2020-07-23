@@ -5,7 +5,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 interface PageProps {
-	member: Member;
+	member: IMember;
 }
 
 const TeamMember: NextPage<PageProps> = ({ member }) => {
@@ -27,14 +27,14 @@ const TeamMember: NextPage<PageProps> = ({ member }) => {
 export const getStaticProps: GetStaticProps<PageProps, { member: string }> = async ({ params }) => {
 	return {
 		props: {
-			member: members.find((mem) => mem.name.toLowerCase() === params!.member)!
+			member: members.find((mem) => mem.name.replace(' ', '-').toLowerCase() === params!.member)!
 		}
 	};
 };
 
 export const getStaticPaths: GetStaticPaths<{ member: string }> = async () => {
 	return {
-		paths: members.map((mem) => ({ params: { member: mem.name.toLowerCase() } })),
+		paths: members.map((mem) => ({ params: { member: mem.name.replace(' ', '-').toLowerCase() } })),
 		fallback: false
 	};
 };

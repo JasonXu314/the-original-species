@@ -9,7 +9,7 @@ const Contact: NextPage = () => {
 				<title>TOS | Contact Us</title>
 			</Head>
 			<h1>Contact Us</h1>
-			<a href="#">Contact Us</a>
+			Email us at <a href="mailto:toriginalspecies@gmail.com">toriginalspecies@gmail.com</a>
 		</div>
 	);
 };

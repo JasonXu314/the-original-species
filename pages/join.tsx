@@ -9,7 +9,7 @@ const Contact: NextPage = () => {
 				<title>TOS | Join Us</title>
 			</Head>
 			<h1>Join Us</h1>
-			<p>Reasons</p>
+			Email us at <a href="mailto:toriginalspecies@gmail.com">toriginalspecies@gmail.com</a> if interested
 		</div>
 	);
 };

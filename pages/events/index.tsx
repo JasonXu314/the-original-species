@@ -1,9 +1,14 @@
 import styles from '&/Events.module.scss';
-import { NextPage } from 'next';
+import events from '@/events';
+import { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const Events: NextPage = () => {
+interface IPageProps {
+	events: IEvent[];
+}
+
+const Events: NextPage<IPageProps> = ({ events }) => {
 	return (
 		<div className={styles.main}>
 			<Head>
@@ -14,21 +19,32 @@ const Events: NextPage = () => {
 				<p>General Introduction</p>
 			</div>
 			<div className={styles.list}>
-				<div className={styles.card}>
-					<div className={styles.iconContainer}>
-						<img className={styles.img} src="stock.jpg" alt="Image Failed To Load..." title="stock photo :P" />
+				{events.map((event, i) => (
+					<div key={i} className={styles.card}>
+						<div className={styles.iconContainer}>
+							<img className={styles.img} src="stock.jpg" alt="Image Failed To Load..." title="stock photo :P" />
+						</div>
+						<div className={styles.cardContent}>
+							<h2>{event.name}</h2>
+							<p>{event.description}</p>
+							<br />
+							<Link href="/events/[event]" as={`/events/${event.name.replace(' ', '-').toLowerCase()}`}>
+								<a>Details</a>
+							</Link>
+						</div>
 					</div>
-					<div className={styles.cardContent}>
-						<h2>Biology Bowl</h2>
-						<p>Description</p>
-						<Link href="/events/[event]" as="/events/biology-bowl">
-							<a>Biology Bowl</a>
-						</Link>
-					</div>
-				</div>
+				))}
 			</div>
 		</div>
 	);
+};
+
+export const getStaticProps: GetStaticProps<IPageProps> = async () => {
+	return {
+		props: {
+			events
+		}
+	};
 };
 
 export default Events;

@@ -27,10 +27,18 @@
 		padding: 1em;
 		gap: 4em;
 
-		.card {
-			border: 1px solid #888888;
-			border-radius: 5px;
-			box-shadow: 2px 3px #eeeeee;
+		.col {
+			.card {
+				border: 1px solid #888888;
+				border-radius: 5px;
+				box-shadow: 2px 3px #eeeeee;
+				margin: 1em 0;
+
+				.link {
+					text-decoration: none;
+					color: black;
+				}
+			}
 		}
 	}
 }

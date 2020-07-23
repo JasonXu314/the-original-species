@@ -7,7 +7,9 @@ const Header: React.FC = () => {
 			<nav className={styles.nav}>
 				<h1 className={styles.logo}>
 					<Link href="/">
-						<a className={styles.text}>The Original Species</a>
+						<a className={styles.text} title="TAKE ME HOME... COUNTRY ROAD">
+							The Original Species
+						</a>
 					</Link>
 				</h1>
 				<ul className={styles.links}>

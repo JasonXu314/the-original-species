@@ -15,4 +15,4 @@ export default [
 		],
 		portrait: ''
 	}
-] as Member[];
+] as IMember[];
