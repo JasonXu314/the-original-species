@@ -16,7 +16,7 @@ const Events: NextPage<IPageProps> = ({ events }) => {
 			</Head>
 			<div className={styles.card}>
 				<h1>Events</h1>
-				<p>General Introduction</p>
+				<p>These are the events we are/will be hosting</p>
 			</div>
 			<div className={styles.list}>
 				{events.map((event, i) => (

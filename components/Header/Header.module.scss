@@ -15,6 +15,11 @@
 				text-decoration: none;
 				color: white;
 			}
+
+			@media (max-width: 1033px) {
+				margin: 0.3em 0.8em;
+				font-size: 1.8em;
+			}
 		}
 
 		.links {
@@ -36,6 +41,75 @@
 					font-size: 1.5em;
 					color: white;
 					text-align: center;
+				}
+
+				@media (max-width: 1033px) {
+					height: unset;
+					display: inline-block;
+
+					&:hover {
+						background: darken(vars.$primary, 10%);
+					}
+
+					.text {
+						display: block;
+						text-decoration: none;
+						padding: 0.7em 0.8em;
+						font-size: 1.3em;
+						color: white;
+						text-align: center;
+					}
+				}
+			}
+		}
+
+		.hamburger {
+			height: 1.3em;
+			padding: 1.1em;
+			position: relative;
+
+			.icon {
+				line {
+					transition: 200ms;
+				}
+			}
+
+			.links {
+				position: absolute;
+				display: flex;
+				flex-direction: column;
+				background: vars.$primary;
+				right: 0;
+				width: 8em;
+				opacity: 0;
+				pointer-events: none;
+				transition: 200ms;
+
+				.link {
+					.text {
+						font-size: 1em;
+					}
+				}
+			}
+
+			&.open {
+				.icon {
+					line:nth-child(1) {
+						transform: translate(50%) rotate(45deg);
+					}
+
+					line:nth-child(2) {
+						transform: translate(-150%);
+					}
+
+					line:nth-child(3) {
+						transform: translate(-20%, 35%) rotate(-45deg);
+					}
+				}
+
+				.links {
+					opacity: 1;
+					pointer-events: all;
 				}
 			}
 		}

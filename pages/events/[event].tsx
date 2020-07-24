@@ -2,6 +2,7 @@ import styles from '&/EventsEvent.module.scss';
 import events from '@/events';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
 
 interface IPageProps {
 	event: IEvent;
@@ -35,6 +36,9 @@ const EventsEvent: NextPage<IPageProps> = ({ event }) => {
 					Register Here
 				</a>
 			</ul>
+			<Link href="/events">
+				<a>Back</a>
+			</Link>
 		</div>
 	);
 };

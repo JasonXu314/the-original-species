@@ -1,12 +1,16 @@
 .main {
 	margin: 0 10em;
+	height: 100%;
 	background: white;
 
 	.card {
 		padding: 1em;
+		text-align: center;
 
-		h1 {
-			text-align: center;
+		h1,
+		p {
+			max-width: 80ch;
+			margin: 0.5em auto;
 		}
 	}
 

@@ -1,8 +1,6 @@
-import styles from '&/EventsEvent.module.scss';
 import members from '@/members';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
+import DefaultErrorPage from 'next/error';
 
 interface PageProps {
 	member: IMember;
@@ -10,17 +8,18 @@ interface PageProps {
 
 const TeamMember: NextPage<PageProps> = ({ member }) => {
 	return (
-		<div className={styles.main}>
-			<Head>
-				<title>TOS | {member.name}</title>
-			</Head>
-			<h1>Details for {member.name}</h1>
-			<p>{member.bio[0]}</p>
-			<p>{member.bio[1]}</p>
-			<Link href="/team">
-				<a>Back</a>
-			</Link>
-		</div>
+		// <div className={styles.main}>
+		// 	<Head>
+		// 		<title>TOS | {member.name}</title>
+		// 	</Head>
+		// 	<h1>Details for {member.name}</h1>
+		// 	<p>{member.bio[0]}</p>
+		// 	<p>{member.bio[1]}</p>
+		// 	<Link href="/team">
+		// 		<a>Back</a>
+		// 	</Link>
+		// </div>
+		<DefaultErrorPage statusCode={404} />
 	);
 };
 

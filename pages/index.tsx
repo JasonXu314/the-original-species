@@ -34,10 +34,6 @@ const Index: NextPage = () => {
 						</Link>
 						<p>TOS plans on hosting a variety of Biology-based competitions in the future, beginning with the Biology Bowl in early August.</p>
 					</div>
-					<div className={styles.card}>
-						<h2>Name&apos;s Significance</h2>
-						<p>Bacon Ipsum</p>
-					</div>
 				</div>
 			</div>
 		</div>
