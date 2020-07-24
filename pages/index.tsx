@@ -20,8 +20,8 @@ const Index: NextPage = () => {
 					<div className={styles.card}>
 						<h2>Welcome</h2>
 						<p>
-							The Original Species &#40;TOS&#41; is a student-run project interested in providing Biology opportunities and hosting Biology events
-							for students interested and to get more interested in Biology and its intricacies.
+							The Original Species &#40;TOS&#41; is a student-run project dedicated to providing opportunities for those interested in Biology. By
+							hosting events, we hope to test knowledge as well as foster more enthusiasm for life science and all of its fascinating intricacies.
 						</p>
 					</div>
 				</div>
