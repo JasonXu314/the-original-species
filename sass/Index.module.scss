@@ -5,7 +5,7 @@
 	.imgContainer {
 		width: 100%;
 		overflow: hidden;
-		height: 20em;
+		max-height: 20em;
 
 		.img {
 			width: 100%;
@@ -26,6 +26,10 @@
 		grid-template-columns: 1fr 1fr;
 		padding: 1em;
 		gap: 4em;
+
+		@media (max-width: 645px) {
+			grid-template-columns: 1fr;
+		}
 
 		.col {
 			.card {
