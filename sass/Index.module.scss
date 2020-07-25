@@ -2,6 +2,14 @@
 	margin: 0 10em;
 	background: white;
 
+	@media (max-width: 674px) {
+		margin: 0 5em;
+	}
+
+	@media (max-width: 486px) {
+		margin: 0 2.5em;
+	}
+
 	.imgContainer {
 		width: 100%;
 		overflow: hidden;
@@ -27,8 +35,9 @@
 		padding: 1em;
 		gap: 4em;
 
-		@media (max-width: 645px) {
+		@media (max-width: 674px) {
 			grid-template-columns: 1fr;
+			gap: 1em;
 		}
 
 		.col {

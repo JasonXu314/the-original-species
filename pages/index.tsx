@@ -8,12 +8,12 @@ const Index: NextPage = () => {
 	const [smol, setSmol] = useState<boolean>(false);
 
 	useEffect(() => {
-		if (window.innerWidth < 645) {
+		if (window.innerWidth < 674) {
 			setSmol(true);
 		}
 
 		const listener = () => {
-			if (window.innerWidth < 645) {
+			if (window.innerWidth < 674) {
 				setSmol(true);
 			} else {
 				setSmol(false);
