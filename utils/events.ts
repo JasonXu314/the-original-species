@@ -2,7 +2,7 @@ export default [
 	{
 		name: 'Biology Bowl',
 		description:
-			'Hello and welcome to our first event! The Biology Bowl will be a 32 round, double elimination, Quiz Bowl-styled competition modeled after the National Science Bowl. The competition will only test Biology topics and will range in difficulty from AP-level to USABO-level based off of round progression. The competition will take place through Zoom on August 8th 2020.',
+			'Hello and welcome to our first event! The Biology Bowl will be a 64 team, single elimination, Quiz Bowl-styled competition modeled after the National Science Bowl. The competition will only test Biology topics and will range in difficulty from AP-level to USABO-level based off of round progression. The competition will take place through both Discord and Zoom on August 8th 2020.',
 		prizes: ['The Winning Team will receive 50 USD'],
 		registration: [
 			'Registration should be complete by the end of the day August 5th.',
