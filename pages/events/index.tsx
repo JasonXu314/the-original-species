@@ -1,14 +1,33 @@
 import styles from '&/Events.module.scss';
-import events from '@/events';
-import { GetStaticProps, NextPage } from 'next';
+import { makeStyles } from '@/utils';
+import { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
-interface IPageProps {
-	events: IEvent[];
-}
+const Events: NextPage = () => {
+	const [smol, setSmol] = useState<boolean>(false);
 
-const Events: NextPage<IPageProps> = ({ events }) => {
+	useEffect(() => {
+		if (window.innerWidth < 674) {
+			setSmol(true);
+		}
+
+		const listener = () => {
+			if (window.innerWidth < 674) {
+				setSmol(true);
+			} else {
+				setSmol(false);
+			}
+		};
+
+		window.addEventListener('resize', listener);
+
+		return () => {
+			window.removeEventListener('resize', listener);
+		};
+	}, []);
+
 	return (
 		<div className={styles.main}>
 			<Head>
@@ -19,32 +38,36 @@ const Events: NextPage<IPageProps> = ({ events }) => {
 				<p>These are the events we are/will be hosting</p>
 			</div>
 			<div className={styles.list}>
-				{events.map((event, i) => (
-					<div key={i} className={styles.card}>
-						<div className={styles.iconContainer}>
-							<img className={styles.img} src="stock.jpg" alt="Image Failed To Load..." title="stock photo :P" />
-						</div>
-						<div className={styles.cardContent}>
-							<h2>{event.name}</h2>
-							<p>{event.description}</p>
-							<br />
-							<Link href="/events/[event]" as={`/events/${event.name.replace(' ', '-').toLowerCase()}`}>
-								<a>Details</a>
-							</Link>
-						</div>
+				<div className={styles.card}>
+					<div className={makeStyles(styles.iconContainer, smol ? styles.smol : undefined)}>
+						<img className={styles.img} src="stock.jpg" alt="Image Failed To Load..." title="stock photo :P" />
 					</div>
-				))}
+					<div className={styles.cardContent}>
+						<Link href="/events/biology-bowl">
+							<a>
+								<h2>Biology Bowl</h2>
+							</a>
+						</Link>
+						{!smol && (
+							<>
+								<p>
+									Hello and welcome to our first event! The Biology Bowl will be a 64 team, single elimination, Quiz Bowl-styled competition
+									modeled after the National Science Bowl. The competition will only test Biology topics and will range in difficulty from
+									AP-level to USABO-level based off of round progression. The competition will take place through both Discord and Zoom on
+									August 8th 2020.
+								</p>
+
+								<br />
+								<Link href="/events/biology-bowl">
+									<a>Details</a>
+								</Link>
+							</>
+						)}
+					</div>
+				</div>
 			</div>
 		</div>
 	);
-};
-
-export const getStaticProps: GetStaticProps<IPageProps> = async () => {
-	return {
-		props: {
-			events
-		}
-	};
 };
 
 export default Events;
