@@ -12,8 +12,8 @@ const Events: NextPage = () => {
 				<h1>Our Team</h1>
 				<p>
 					Our team is composed of motivated and passionate lovers of Biology and STEM in general, including 1 USABO national finalist, 4 Top 50
-					qualifiers, and 5 other Semifinalists. Many of our team members have participated in a wide variety of other high school competitions such
-					as the National Science Bowl and the Science Olympiad. We are dedicated to providing the best experience to participants in our events.
+					qualifiers, and 8 Semifinalists. Many of our team members have participated in a wide variety of other high school competitions such as the
+					National Science Bowl and the Science Olympiad. We are dedicated to providing the best experience to participants in our events.
 				</p>
 			</div>
 			{/* <div className={styles.grid}>

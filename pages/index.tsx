@@ -12,9 +12,7 @@ const Index: NextPage = () => {
 			<div className={styles.imgContainer}>
 				<img className={styles.img} src="stock.jpg" alt="Image Failed To Load..." title="stock photo :P" />
 			</div>
-			<div className={styles.card}>
-				<h1>The Original Species</h1>
-			</div>
+			<h1 className={styles.heading}>The Original Species</h1>
 			<div className={styles.grid}>
 				<div className={styles.col}>
 					<div className={styles.card}>
@@ -31,6 +29,18 @@ const Index: NextPage = () => {
 							</a>
 						</Link>
 						<p>TOS plans on hosting a variety of Biology-based competitions in the future, beginning with the Biology Bowl in early August.</p>
+					</div>
+					<div className={styles.card}>
+						<h2>Links</h2>
+						<p>Events are recorded and placed on our YouTube Channel</p>
+						<a href="https://www.youtube.com/channel/UCvkCFuQHsffVAqqMPwVEiZA" target="_blank" rel="noreferrer noopener" className={styles.link}>
+							The Original Species
+						</a>
+						<hr />
+						<p>Join our Discord server to learn more!</p>
+						<a href="https://discord.gg/6mbNa3b" target="_blank" rel="noreferrer noopener" className={styles.link}>
+							https://discord.gg/6mbNa3b
+						</a>
 					</div>
 				</div>
 			</div>

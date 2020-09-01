@@ -1,3 +1,5 @@
+@use './vars';
+
 .main {
 	margin: 0 10em;
 	background: white;
@@ -22,18 +24,19 @@
 		}
 	}
 
+	.heading {
+		padding-top: 0.5em;
+		text-align: center;
+	}
+
 	.card {
 		padding: 1em;
-
-		h1 {
-			text-align: center;
-		}
 	}
 
 	.grid {
 		display: grid;
 		grid-template-columns: 1fr;
-		padding: 1em;
+		padding: 0 1em 1em 1em;
 		gap: 4em;
 
 		@media (max-width: 674px) {
@@ -48,9 +51,28 @@
 				box-shadow: 2px 3px #eeeeee;
 				margin: 1em 0;
 
+				hr {
+					margin: 0.5em 1em 0.25em;
+				}
+
 				.link {
 					text-decoration: none;
 					color: black;
+
+					.text {
+						width: fit-content;
+						display: inline-block;
+					}
+
+					&:hover {
+						color: white;
+						background: vars.$primary;
+
+						.text {
+							color: white;
+							background: vars.$primary;
+						}
+					}
 				}
 			}
 		}

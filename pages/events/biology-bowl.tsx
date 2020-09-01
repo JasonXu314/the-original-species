@@ -81,11 +81,15 @@ const EventsEvent: NextPage = () => {
 			<br />
 			<h1>Details for Biology Bowl</h1>
 			<p>
-				Hello and welcome to our first event! The Biology Bowl will be a 64 team, single elimination, Quiz Bowl-styled competition modeled after the
-				National Science Bowl. The competition will only test Biology topics and will range in difficulty from AP-level to USABO-level based off of
-				round progression. The competition will take place through both Discord and Zoom on August 8th 2020.
+				Hello and welcome to our first event! The Biology Bowl will be a single elimination Quiz Bowl-styled competition modeled after the National
+				Science Bowl. The competition will only test Biology topics and will range in difficulty from AP-level to USABO-level based off of round
+				progression. The competition will take place through both Discord and Zoom on August 8th 2020.
 			</p>
-			<a href="https://docs.google.com/document/d/1_f6iY2_lq4J5B5RArVEMLHsWSNanEgabmLolfIoB98Q/edit?usp=sharing" target="_blank" rel="noreferrer">
+			<p>108 competitors from 40 teams and 6 countries competed in the Biology Bowl</p>
+			<a
+				href="https://docs.google.com/document/d/1_f6iY2_lq4J5B5RArVEMLHsWSNanEgabmLolfIoB98Q/edit?usp=sharing"
+				target="_blank"
+				rel="noreferrer noopener">
 				Rules
 			</a>
 			<hr />
