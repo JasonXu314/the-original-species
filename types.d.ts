@@ -1,7 +1,7 @@
 interface IMember {
 	name: string;
-	portrait: string;
-	bio: [string, string];
+	location: string;
+	roles: string[];
 }
 
 interface IEvent {
